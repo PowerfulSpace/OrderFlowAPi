@@ -42,3 +42,13 @@ OrderFlowAPI — это система обработки заказов, дем
 - Возможность запуска через Docker Compose.
 
 ---
+
+<img src="https://github.com/user-attachments/assets/b23e77bb-0c03-4ec1-9780-37a8e75c6d60" width="300" alt="Architecture Diagram" />
+
+<img src="https://github.com/user-attachments/assets/a558a954-ce18-4afe-840f-9112a05d2eff" width="300" alt="Architecture Diagram" />
+
+
+
+
+
+
