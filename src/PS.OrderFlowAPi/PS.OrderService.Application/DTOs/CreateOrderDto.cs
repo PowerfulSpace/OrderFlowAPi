@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PS.OrderService.Application.DTOs
+﻿namespace PS.OrderService.Application.DTOs
 {
-    internal class CreateOrderDto
+    public class CreateOrderDto
     {
+        public string ProductName { get; set; } = string.Empty;
+        public int Quantity { get; set; }
     }
 }

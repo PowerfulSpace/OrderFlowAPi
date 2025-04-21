@@ -1,12 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PS.OrderService.Application.DTOs;
+using PS.OrderService.Application.Services;
 
 namespace PS.OrderService.API.Controllers
 {
-    public class OrdersController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class OrdersController : ControllerBase
     {
-        public IActionResult Index()
+        private readonly IOrderService _orderService;
+
+        public OrdersController(IOrderService orderService)
         {
-            return View();
+            _orderService = orderService;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateOrder(CreateOrderDto dto)
+        {
+            var orderId = await _orderService.CreateOrderAsync(dto);
+            return Ok(new { OrderId = orderId });
         }
     }
 }
