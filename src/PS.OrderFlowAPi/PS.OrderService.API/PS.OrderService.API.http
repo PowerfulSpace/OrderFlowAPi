@@ -1,0 +1,6 @@
+@PS.OrderService.API_HostAddress = http://localhost:5145
+
+GET {{PS.OrderService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
