@@ -18,7 +18,6 @@ builder.Services.AddDbContext<OrderDbContext>(options =>
 
 builder.Services.AddScoped<IOrderProcessor, OrderProcessor>();
 builder.Services.AddHostedService<RabbitMqConsumer>();
-builder.Services.AddHostedService<Worker>();
 
 
 
