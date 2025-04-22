@@ -1,6 +1,10 @@
 ﻿namespace PS.OrderProcessingService.Domain.Enums
 {
-    internal class OrderStatus
+    public enum OrderStatus
     {
+        Created,
+        Processing,
+        Completed,
+        Failed
     }
 }

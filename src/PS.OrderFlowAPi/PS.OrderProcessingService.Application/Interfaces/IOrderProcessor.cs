@@ -1,6 +1,9 @@
-﻿namespace PS.OrderProcessingService.Application.Interfaces
+﻿using PS.OrderProcessingService.Domain.Entities;
+
+namespace PS.OrderProcessingService.Application.Interfaces
 {
-    internal interface IOrderProcessor
+    public interface IOrderProcessor
     {
+        Task ProcessOrderAsync(Order order);
     }
 }
