@@ -2,7 +2,7 @@
 
 namespace PS.OrderService.Application.Services
 {
-    public interface IOrderService
+    public interface IOrderProcessor
     {
         Task<Guid> CreateOrderAsync(CreateOrderDto dto);
     }

@@ -8,9 +8,9 @@ namespace PS.OrderService.API.Controllers
     [Route("api/[controller]")]
     public class OrdersController : ControllerBase
     {
-        private readonly IOrderService _orderService;
+        private readonly IOrderProcessor _orderService;
 
-        public OrdersController(IOrderService orderService)
+        public OrdersController(IOrderProcessor orderService)
         {
             _orderService = orderService;
         }

@@ -6,12 +6,12 @@ using PS.OrderService.Domain.Enums;
 
 namespace PS.OrderService.Infrastructure.Services
 {
-    public class OrderService : IOrderService
+    public class OrderProcessor : IOrderProcessor
     {
         private readonly IMessagePublisher _messagePublisher;
         private readonly IOrderRepository _orderRepository;
 
-        public OrderService(IMessagePublisher messagePublisher, IOrderRepository orderRepository)
+        public OrderProcessor(IMessagePublisher messagePublisher, IOrderRepository orderRepository)
         {
             _messagePublisher = messagePublisher;
             _orderRepository = orderRepository;
