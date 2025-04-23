@@ -3,7 +3,6 @@ using PS.OrderProcessingService.Application.Interfaces;
 using PS.OrderProcessingService.Infrastructure.Messaging;
 using PS.OrderProcessingService.Infrastructure.Persistence;
 using PS.OrderProcessingService.Infrastructure.Services;
-using PS.OrderProcessingService.Worker;
 
 
 
