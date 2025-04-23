@@ -26,10 +26,6 @@ namespace PS.OrderService.Infrastructure.Persistence
         public async Task AddAsync(Order order)
         {
             await _dbContext.Orders.AddAsync(order);
-        }
-
-        public async Task SaveChangesAsync()
-        {
             await _dbContext.SaveChangesAsync();
         }
     }

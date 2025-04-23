@@ -7,6 +7,5 @@ namespace PS.OrderService.Application.Interfaces
         Task<IEnumerable<Order>> GetAllAsync();
         Task<Order?> GetByIdAsync(Guid id);
         Task AddAsync(Order order);
-        Task SaveChangesAsync();
     }
 }
