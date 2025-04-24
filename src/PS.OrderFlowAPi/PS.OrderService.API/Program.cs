@@ -1,4 +1,5 @@
-﻿using PS.OrderService.Infrastructure;
+﻿using PS.OrderService.API;
+using PS.OrderService.Infrastructure;
 
 
 
@@ -6,11 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services
+    .AddPresentation()
     .AddInfrastructure(builder.Configuration);
-
-builder.Services.AddControllers();
-builder.Services.AddOpenApi();
-
 
 
 var app = builder.Build();

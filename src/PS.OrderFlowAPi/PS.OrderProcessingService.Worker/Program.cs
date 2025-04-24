@@ -7,31 +7,17 @@ using PS.OrderProcessingService.Infrastructure.Services;
 
 
 
-
 var builder = Host.CreateApplicationBuilder(args);
-
 
 builder.Services.AddDbContext<OrderDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
-builder.Services.AddScoped<IOrderProcessor, OrderProcessor>();
+builder.Services.AddSingleton<IOrderProcessor, OrderProcessor>();
 builder.Services.AddHostedService<RabbitMqConsumer>();
 
 
 
-var host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices((context, services) =>
-    {
-        var configuration = context.Configuration;
-        var connectionString = configuration.GetConnectionString("DefaultConnection");
-
-        services.AddDbContext<OrderDbContext>(options =>
-            options.UseSqlServer(connectionString));
-
-        services.AddScoped<IOrderProcessor, OrderProcessor>();
-        services.AddHostedService<RabbitMqConsumer>();
-    })
-    .Build();
-
-await host.RunAsync();
+var host = builder.Build();
+{
+    await host.RunAsync();
+}
